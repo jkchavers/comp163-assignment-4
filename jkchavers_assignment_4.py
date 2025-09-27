@@ -110,7 +110,7 @@ else:
         finalAssesssment += "\nYour survival is not expected! IF YOU DO SURVIVE, YOU WILL BE ONE STEP CLOSER TO YOUR DESTINY!!!!!!\n"
         chosenStudyOption = input(study_Prompt)
 
-if chosenStudyOption is study_Options:
+if chosenStudyOption in study_Options:
     if chosenStudyOption is not study_Options[2] or chosenStudyOption is not study_Options[3]:
         social_points += 10
         stress_level += 75
