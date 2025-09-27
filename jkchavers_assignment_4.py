@@ -111,7 +111,27 @@ else:
         chosenStudyOption = input(study_Prompt)
 
 if chosenStudyOption is study_Options:
-   
+    if chosenStudyOption is not study_Options[2] or chosenStudyOption is not study_Options[3]:
+        social_points += 10
+        stress_level += 75
+        study_hours += 5
+        current_gpa -= .1
+        if social_points >= 150:
+            study_hours -= 5
+            finalAssesssment += "\nTouching grass was your downfall\n"
+        elif social_points < 150:
+            finalAssesssment += "\nYou are now one with the darkside\n"
+    if chosenStudyOption is study_Options[2] or chosenStudyOption is study_Options[3]:
+        social_points += 55
+        stress_level -= 30
+        study_hours -= 10
+        current_gpa += .3
+        if social_points >= 150:
+            study_hours -= 13
+            finalAssesssment += "\nTouching grass was your downfall\n"
+        elif social_points < 150:
+            finalAssesssment += "\nYou are now one with the darkside\n"
+
     if chosenStudyOption != study_Options[0]:
         finalAssesssment += "\nYou have achieved the rank of Sith Assassin\n"
     elif chosenStudyOption == study_Options[1]:
